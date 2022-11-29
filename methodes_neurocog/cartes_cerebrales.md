@@ -162,8 +162,8 @@ glue("t1-fig", fig, display=False)
 Un exemple d'IRM structurelle (ici avec un contraste dit T1), sur trois plans de coupes: coronal (gauche), sagital (milieu) et axial (droite). Voir l'astuce {ref}`Naviguer à travers les coupes du cerveau<coupes-tip>` pour une explication de ces termes. Cette figure est générée par du code python à l'aide de la librairie [nilearn](https://nilearn.github.io/) à partir d'un jeu de données public appelé template MNI152 2009 {cite:p}`Fonov2011-xr` (cliquer sur + pour voir le code).
 ```
 Le type d'image le plus couramment acquis avec un appareil d'IRM vise à caractériser la morphologie du cerveau. Comme on peut le voir dans la figure {ref}`ci-dessus <t1-fig>`, on distingue aisément certains éléments anatomiques:
- * La **matière grise**, en périphérie du cortex, apparaît en gris dans l'image. C'est là que les corps des neurones sont présents.
- * Il est aussi possible de distinguer la **matière blanche** en blanc (ou plutôt gris clair) qui contient des paquets d'axones - c'est à dire les connexions entre les neurones.
+ * La **matière grise**, en périphérie du cortex, apparaît en gris foncé dans l'image. C'est là que les corps des neurones sont présents.
+ * Il est aussi possible de distinguer la **matière blanche** (en gris clair) qui contient des paquets d'axones - c'est à dire les connexions entre les neurones.
  * Enfin, en **noir**, on peut voir des structures comme les ventricules, qui contiennent de l'eau, des nutriments, ainsi que des déchets métaboliques.
 
  La taille et la forme de ces structures peuvent varier en fonction de nombreux facteurs comportementaux ou démographiques. Par exemple, la quantité de matière grise diminue de manière massive avec l'âge: on parle d'**atrophie corticale**. Plusieurs techniques d'analyse des images ont été développées pour quantifier ces changements morphologiques, comme la **volumétrie**, la "**voxel-based morphometry**", ou bien encore les **analyses de surface**. Ces techniques seront présentées dans le chapitre {ref}`morphometrie-chapitre`.

@@ -165,14 +165,14 @@ Le volume du cerveau (3D) est formé plusieurs milliers voxels, qui sont de peti
 
 ```{warning}
 :name: tr-irmf-warning
-Le paramètre `TR` en IRM fait référence au temps entre deux excitations radio-fréquences, qui est très court. En IRMf, le paramètre `TR` est la durée d'acquisition d'un volume entier, qui comprend de nombreuses excitations radio-fréquences.
+Le paramètre `TR` en IRM fait référence au temps entre deux excitations radio-fréquences, qui est très court. En IRMf, le paramètre `TR` est la durée qui sépare l'acquisition de deux volumes successifs. Chaque volume en IRMf comprend de nombreuses excitations radio-fréquences.
 ```
 
 ```{admonition} Compromis entre résolution spatiale et temporelle en IRMf
 :class: tip
 :name: resolution
 
-Lorsque l'on choisit une séquence d'IRMf, on est souvent amené à privilégier la résolution temporelle versus spatiale. On peut par exemple faire des images du cerveau entier en 700 ms avec une résolution spatiale de 3 x 3 x 3 mm$^3$, ou bien acquérir la même image avec une résolution spatiale de 2 x 2 x 2 mm$^3$, mais cette fois-ci en 1500 ms. Il n'y a pas un choix de paramètre meilleur qu'un autre, mais la chercheuse doit décider si la résolution spatiale ou temporelle est plus importante pour ses questions de recherche.
+Lorsque l'on choisit une séquence d'IRMf, on est parfois amené à privilégier la résolution temporelle versus spatiale, dépendemment de la question de recherche. On peut par exemple faire des images du cerveau entier en 700 ms avec une résolution spatiale de 3 x 3 x 3 mm$^3$, ou bien acquérir la même image avec une résolution spatiale de 2 x 2 x 2 mm$^3$, mais cette fois-ci en 1500 ms. Il n'y a pas un choix de paramètre meilleur qu'un autre.
 ```
 (couplage-neurovasculaire-irmf-section)=
 ### Couplage neurovasculaire
@@ -206,9 +206,9 @@ Quelle est l'origine du **signal BOLD**? L'hémoglobine existe sous deux états,
 - L'**oxyhémoglobine** est **diamagnétique**
 - La **désoxyhémoglobine** est **paramagnétique**
 
-Ce que cela veut dire, c'est que quand elles sont soumises à des impulsions électromagnétiques, ces deux molécules se comportent de manière très différente. La désoxyhémoglobine va créer des inhomogénéités du champ magnétique, alors que l'oxyhémoglobine n'a pas d'effet sur ce même champ. Les séquences IRM pondérées $T_2^*$ sont très sensibles à de telles inhomogénéités. La désoxyhémoglobine déforme donc le champ magnétique $B_O$ induit par l'aimant, ce qui fait en sorte que le temps de relaxation $T_2^*$ est plus rapide. Les images acquises en IRMf utilisent donc un contraste en $T_2^*$, et cela a pour effet d'amplifier le signal quand le sang devient plus oxygéné en réponse à une augmentation de l'activité neuronale. Pour cette raison, le signal utilisé en IRMf est appelé signal BOLD, pour _Blood oxygenation level-dependent_, soit signal dépendant de l'oxygénation du sang.
+Ce que cela veut dire, c'est que quand elles sont soumises à des impulsions électromagnétiques, ces deux molécules se comportent de manière très différente. La désoxyhémoglobine va créer des inhomogénéités du champ magnétique, alors que l'oxyhémoglobine n'a pas d'effet sur ce même champ. Les séquences IRM pondérées $T_2^*$ sont très sensibles à de telles inhomogénéités. La désoxyhémoglobine déforme donc le champ magnétique $B_0$ induit par l'aimant, ce qui fait en sorte que le temps de relaxation $T_2^*$ est plus rapide. Les images acquises en IRMf utilisent donc un contraste en $T_2^*$, et cela a pour effet d'amplifier le signal quand le sang devient plus oxygéné en réponse à une augmentation de l'activité neuronale. Pour cette raison, le signal utilisé en IRMf est appelé signal BOLD, pour _Blood oxygenation level-dependent_, soit signal dépendant de l'oxygénation du sang.
 
-|               |   'Désoxyhémoglobine'     | `Oxyhémoglobine`  |
+|               |   `Désoxyhémoglobine`     | `Oxyhémoglobine`  |
 | ------------- |:-------------:| -----:|
 |Propriétés électromagnétiques | Paramagnétique | Diamagnétique|
 | Impact sur le signal BOLD      | **Réduit** le signal BOLD  | **Augmente** le signal BOLD|

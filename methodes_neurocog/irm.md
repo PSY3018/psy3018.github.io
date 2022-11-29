@@ -170,7 +170,7 @@ HTML('<iframe width="560" height="315" src="https://www.youtube.com/embed/9GZvd_
 
 
 ## Contrastes $T_1$ et $T_2$
-Les contrastes $T_1$ et $T_2$ sont les paramètres principaux acquis durant une séance IRM. Initialement, les spins des protons d'hydrogène sont alignés avec le champ $B_0$. L'application d'impulsions radiofréquences fait basculer les spins selon l'axe $B_1$, axe perpendiculaire à $B_0$. Une fois les impulsions radiofréquences arrêtées, les spins s'alignent avec le champ $B_0$. Ce réalignement est caractérisé par deux dynamiques distinctes, liées aux constantes de temps $T_1$ et $T_2$.
+Les contrastes $T_1$ et $T_2$ sont les paramètres principaux acquis durant une séance IRM. Initialement, les spins des protons d'hydrogène sont alignés avec le champ $B_0$. L'application d'impulsions radiofréquences fait basculer les spins selon le plan orthogonal à $B_0$. Une fois les impulsions radiofréquences arrêtées, les spins s'alignent avec le champ $B_0$. Ce réalignement est caractérisé par deux dynamiques distinctes, liées aux constantes de temps $T_1$ et $T_2$.
 
 **Relaxation en $T_1$**. L'augmentation de la composante selon $B_0$ (composante $M_z$), ou _relaxation longitudinale_, suit une fonction exponentielle croissante. Le temps caractéristique de cette croissance (la vitesse de croissance) s'appelle le $T_1$. Le temps $T_1$ correspond au temps écoulé pour obtenir 63% de la valeur d'équilibre de la contribution du moment magnétique selon l'axe z ($M_0$). Pour ceux qui sont à l'aise avec les expressions mathématiques, la repousse en $B_0$ suit l'équation $M_z(t) = M_0 ( 1 - e^{-t / T_1})$.
 
@@ -321,7 +321,7 @@ Lorsque nous acquérons des données IRM, nous ne mesurons généralement pas to
 ```
 
 ```{admonition} $TR$
-Nous appelons $TR$ le temps qui sépare deux séries d'excitations. Cette valeur va correspondre au temps d'acquisition d'une coupe pour un IRM structurel, et le temps d'acquisition d'un volume cérébral complet en IRMf. C'est une convention bizarre, mais très utilisée par les physiciens IRM.
+Nous appelons $TR$ le temps qui sépare deux excitations radiofréquence. Pour obtenir un IRM structurel, il y a besoin de plusieurs centaines de TRs. Il existe une autre définition, spécifique à la communauté IRMf, qui dit que le TR est la durée qui sépare deux volumes IRMf.
 ```
 ```{admonition} angle de bascule
 Si nous nous intéressons à la fin du processus de relaxation, nous n'avons pas besoin de basculer les spins complètement dans la direction $B_1$, mais simplement à un certain nombre de degrés de $B_0$. Ce paramètre est appelé angle de bascule ("flip angle" en anglais).
@@ -333,12 +333,12 @@ Pourquoi s'embêter à faire des contrastes $T_1$ et $T_2$ quand l'un semble êt
 ```
 
 ## $T_2^*$, IRMf, IRMd
-**Déphasage.** Comme nous l'avons vu dans l'encadré {ref}`sur la phase <phase-tip>`, les impulsions radiofréquences vont non seulement faire basculer les spins, mais aussi les mettre en phase. Lorsque nous arrêtons les impulsions, les spins vont progressivement se déphaser. Ce déphasage est dû à des micro-interactions entre protons ainsi que des molécules des tissus qui présentent des propriétés magnétiques. La courbe de relaxation va avoir la même forme, mais avec des temps caractéristiques modifiés, que nous appelons $T_1^*$ et $T_2^*$.
+**Déphasage.** Comme nous l'avons vu dans l'encadré {ref}`sur la phase <phase-tip>`, les impulsions radiofréquences vont non seulement faire basculer les spins, mais aussi les mettre en phase. Lorsque nous arrêtons les impulsions, les spins vont progressivement se déphaser. Ce déphasage est dû à des micro-interactions entre protons ainsi que des molécules des tissus qui présentent des propriétés magnétiques. La courbe de relaxation $T_2$ va avoir la même forme, mais avec des temps caractéristiques modifiés, que nous appelons $T_2^*$.
 
-**IRM fonctionnelle.** Les inhomogénéités dans le champ magnétique qui causent le déphasage peuvent notamment être créées par la désoxyhémoglobine que nous retrouvons dans le sang. Nous allons voir plus en détails comment l'oxyhémoglobine et la désoxyhémoglobine perturbent le champ magnétique dans le chapitre sur l'[IRM fonctionnelle](https://psy3018.github.io/irm_fonctionnelle.html). En IRM fonctionnelle, nous utilisons des séquences pondérées en T2*.
+**IRM fonctionnelle.** Les inhomogénéités dans le champ magnétique qui causent le déphasage peuvent notamment être créées par la désoxyhémoglobine que nous retrouvons dans le sang. Nous allons voir plus en détails comment l'oxyhémoglobine et la désoxyhémoglobine perturbent le champ magnétique dans le chapitre sur l'[IRM fonctionnelle](https://psy3018.github.io/irm_fonctionnelle.html). En IRM fonctionnelle, nous utilisons des séquences pondérées en $T_2^*$.
 
 
-**IRM de diffusion.** En IRM de diffusion, nous utilisons également un contraste en T2*. Par contre, en IRM de diffusion, nous mesurons les inhomogénéités en alternant la direction des impulsions (ex. en donnant une impulsion selon l'axe xy, puis en donnant une impulsion selon l'axe -xy). En effectuant plusieurs images avec des directions d'excitation différentes, nous pouvons obtenir une idée de la direction de la diffusion de l'eau. Cette opération nous permet au final de connaître la direction des fibres de matière blanche, car plus une fibre pointe vers une direction donnée, plus la diffusion sera grande dans cette direction. Nous allons revenir sur ce sujet dans le chapitre sur [l'IRM de diffusion](https://psy3018.github.io/irm_diffusion.html)
+**IRM de diffusion.** En IRM de diffusion, nous mesurons aussi un déphasage, mais ce déphasage est produit par le déplacement des molécules d'eau le long d'un gradient magnétique fort. En effectuant plusieurs images avec des directions de gradients différentes, nous pouvons obtenir une idée de l'amplitude et de la direction de diffusion des molécules d'eau. Cette opération nous permet au final de connaître la direction des fibres de matière blanche. Nous allons revenir sur ce sujet dans le chapitre sur [l'IRM de diffusion](https://psy3018.github.io/irm_diffusion.html)
 
 ## Console et séquences d'acquisition.
 ```{figure} ./irm/irm_console.png
